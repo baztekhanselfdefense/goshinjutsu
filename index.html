@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baztekhan Goshinjutsu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Roboto and Oswald for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-[#3c4043] overflow-x-hidden antialiased">
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 md:px-12 text-white bg-transparent">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">  
+                    <img src="img/Baztekhan Martial Arts logo.png" 
+                         alt="Baztekhan Logo" 
+                         class="w-12 h-12 object-contain"
+                         onerror="this.src='img/Baztekhan Martial Arts logo white.png'; this.style.filter='invert(16%) sepia(89%) saturate(6054%) hue-rotate(358deg) brightness(100%) contrast(100%)'">
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-xl tracking-tight uppercase leading-none">Baztekhan</span>
+                    <span class="text-[9px] font-bold tracking-[0.31em] text-brand-gold uppercase">Goshinjutsu</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8 font-medium uppercase text-sm">
+                <a href="#about" class="hover:text-brand-gold transition-colors">About Us</a>
+                <a href="#programs" class="hover:text-brand-gold transition-colors">Workshops</a>
+                <a href="#products" class="hover:text-brand-gold transition-colors">Gears</a>
+                <a href="#faq" class="hover:text-brand-gold transition-colors">FAQ</a>
+                <a href="https://forms.gle/MKrBq4m5kRkSHGwdA" target="_blank" class="bg-brand-red px-5 py-2 rounded-sm font-bold hover:bg-red-700 transition-all shadow-md">Enroll</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#1a1a1a] z-40 flex flex-col items-center justify-center gap-8 text-white text-xl font-heading uppercase tracking-widest transition-transform duration-500 translate-x-full md:hidden">
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#programs" onclick="toggleMenu()">Programs</a>
+        <a href="#products" onclick="toggleMenu()">Gear Store</a>
+        <a href="#faq" onclick="toggleMenu()">FAQ</a>
+        <a href="https://forms.gle/MKrBq4m5kRkSHGwdA" target="_blank" onclick="toggleMenu()" class="text-brand-red font-bold">Enroll Now</a>
+        <button onclick="toggleMenu()" class="mt-8 text-sm border border-gray-700 px-4 py-2 rounded-full">Close</button>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative h-[85vh] flex items-center justify-center bg-black overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=1920" 
+                 class="w-full h-full object-cover opacity-60" alt="MMA Training">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-6 mt-16">
+            <h1 class="text-5xl md:text-8xl font-heading font-bold uppercase tracking-tight mb-4 leading-tight">
+                Self-Defense<span class="text-brand-red italic"> Martial Arts</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                Master the skills to protect yourself with training built on discipline and honor.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://forms.gle/MKrBq4m5kRkSHGwdA" target="_blank" class="bg-brand-red text-white px-10 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-red-700 transition-all shadow-xl">
+                    Get Started
+                </a>
+                <a href="#programs" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all">
+                    Our Classes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold uppercase mb-6">Welcome to Baztekhan Self-Defense Martial Arts</h2>
+                    <div class="w-16 h-1 bg-brand-red mb-8"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        We provide a structured training environment for enthusiasts of all ages to learn the art of self-defense. Our mission is to build confidence, physical fitness, and healthy minds through practical training in martial arts.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Join our diverse coaching team that prioritizes safety while pushing you to your absolute limits.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="img\Capture1.PNG"
+                         class="rounded-lg shadow-xl" alt="Training">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto px-6"><div class="site-divider"></div></div>
+
+    <!-- PROGRAMS SECTION -->
+    <section id="programs" class="py-24 px-6 bg-[#f8f9fa]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-heading font-bold uppercase">Training Workshops</h2>
+                <p class="text-gray-500 mt-2 uppercase tracking-widest text-sm font-bold">Choose Your Discipline</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-6 rounded border border-gray-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-heading font-bold mb-4 uppercase text-brand-red">Karate</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">A traditional martial art emphasizing strikes, kicks, and blocks for self-defense and discipline.</p>
+                </div>
+                <div class="bg-white p-6 rounded border border-gray-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-heading font-bold mb-4 uppercase text-brand-red">Kick-Boxing</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">High-energy combat sport combining boxing punches with martial arts kicks for striking excellence.</p>
+                </div>
+                <div class="bg-white p-6 rounded border border-gray-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-heading font-bold mb-4 uppercase text-brand-red">Combat Aikido</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Practical self-defense system using joint locks, throws, and redirection of an opponent's energy.</p>
+                </div>
+                <div class="bg-white p-6 rounded border border-gray-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-heading font-bold mb-4 uppercase text-brand-red">Arnis De Mano</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Filipino martial art specializing in stick fighting, knife techniques, and empty-hand combat.</p>
+                </div>
+                <div class="bg-white p-6 rounded border border-gray-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-heading font-bold mb-4 uppercase text-brand-red">MMA</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Comprehensive mixed martial arts training integrating striking, grappling, and ground fighting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GEAR STORE SECTION -->
+    <section id="products" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-heading font-bold uppercase">Training Gear</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Gear Item -->
+                <div class="flex flex-col bg-white border border-gray-100 rounded-lg overflow-hidden group">
+                    <div class="aspect-square bg-gray-50 relative overflow-hidden">
+                        <img src="img\Gloves black.PNG" class="w-full h-full object-cover group-hover:scale-100 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-heading text-xl font-bold uppercase mb-1">Combat Gloves</h3>
+                        <p class="text-brand-red font-bold text-lg mb-4">₱500</p>
+                        <a href="https://m.me/793745347671698?text=Ordering Black Combat Gloves" target="_blank" class="inline-block bg-black text-white px-8 py-2 rounded font-bold uppercase text-xs tracking-widest hover:bg-brand-red transition-all">Order Now</a>
+                    </div>
+                </div>
+                <!-- Gear Item 2 -->
+                <div class="flex flex-col bg-white border border-gray-100 rounded-lg overflow-hidden group">
+                    <div class="aspect-square bg-gray-50 relative overflow-hidden">
+                        <img src="img\Uniform.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-heading text-xl font-bold uppercase mb-1">Training Uniform</h3>
+                        <p class="text-brand-red font-bold text-lg mb-4">₱3000</p>
+                        <a href="https://m.me/793745347671698?text=Ordering complete uniform" target="_blank" class="inline-block bg-black text-white px-8 py-2 rounded font-bold uppercase text-xs tracking-widest hover:bg-brand-red transition-all">Order Now</a>
+                    </div>
+                </div>
+                <!-- Gear Item 3 -->
+                <div class="flex flex-col bg-white border border-gray-100 rounded-lg overflow-hidden group">
+                    <div class="aspect-square bg-gray-50 relative overflow-hidden">
+                        <img src="img\kick pad black.PNG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-heading text-xl font-bold uppercase mb-1">Kick Pad</h3>
+                        <p class="text-brand-red font-bold text-lg mb-4">₱500</p>
+                        <a href="https://m.me/793745347671698?text=Interested in Kick Pad" target="_blank" class="inline-block bg-black text-white px-8 py-2 rounded font-bold uppercase text-xs tracking-widest hover:bg-brand-red transition-all">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 px-6 bg-[#f8f9fa]">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-heading font-bold uppercase text-center mb-12 italic">Common Inquiries</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white border border-gray-200 rounded">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-bold text-[#444]" onclick="toggleFaq(this)">
+                        <span>Paano sumali?</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                        Click ang 'Enroll' button para makapag-fill up ng form. Pwede din mag-message sa aming Facebook Page kung meron pang ibang katanungan. Kami na ang bahala mag-guide sa 'yo sa registration.
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-bold text-[#444]" onclick="toggleFaq(this)">
+                        <span>Pwede ba kahit matanda na?</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="hidden px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                        May mga program kami para sa mga bata, teens, at pati na rin sa mga adults. Siguradong safe at swak ang training namin depende sa age group niyo para talagang maging effective ito.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-20 px-6 bg-[#1a1a1a] text-white text-center">
+        <h2 class="text-3xl md:text-5xl font-heading font-bold uppercase mb-8 leading-tight">Begin Your Training Today</h2>
+        <a href="https://forms.gle/MKrBq4m5kRkSHGwdA" target="_blank" class="inline-block bg-brand-red text-white px-12 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-red-700 transition-all shadow-2xl">Register Now</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-gray-400 py-16 px-6 text-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <h4 class="text-white font-heading font-bold uppercase mb-6 tracking-widest text-lg">Baztekhan Creed</h4>
+                <p class="leading-relaxed">I fear nothing,</p>
+                <p class="leading-relaxed">I hate no one,</p>
+                <p class="leading-relaxed">I envy nobody,</p>
+                <p class="leading-relaxed">For I hold myself, my hands,</p>
+                <p class="leading-relaxed">and my spirit sacred.</p>
+                <p class="leading-relaxed">In defense of my principles,</p>
+                <p class="leading-relaxed">my honor, and my kin</p>
+                <p class="leading-relaxed">for Baztekhan is my way.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-heading font-bold uppercase mb-6 tracking-widest text-lg">Navigation</h4>
+                <div class="flex flex-col gap-3 font-bold uppercase text-[11px] tracking-widest">
+                    <a href="#about" class="hover:text-white transition-colors">About Us</a>
+                    <a href="#programs" class="hover:text-white transition-colors">Training Workshops</a>
+                    <a href="#products" class="hover:text-white transition-colors">Training Gears</a>
+                    <a href="https://www.facebook.com/baztekhanselfdefense" target="_blank" class="hover:text-white transition-colors">Facebook Page</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-heading font-bold uppercase mb-6 tracking-widest text-lg">Interested?</h4>
+                <p class="mb-2">Connect with us to verify class schedules and inquiries:</p>
+                <a href="https://m.me/793745347671698" target="_blank" class="text-brand-red font-bold hover:underline">Facebook Messenger</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-900 text-center text-[10px] uppercase tracking-[0.4em]">
+            &copy; <span id="year"></span> Baztekhan Self-Defense Martial Arts
+        </div>
+    </footer>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>

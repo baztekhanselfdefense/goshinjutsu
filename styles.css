@@ -1,0 +1,28 @@
+/* Custom Styles for Baztekhan Martial Arts Website */
+body { font-family: 'Roboto', sans-serif; }
+h1, h2, h3, h4, .font-heading { font-family: 'Oswald', sans-serif; }
+
+.bg-brand-red { background-color: #DC2626; }
+.text-brand-red { color: #DC2626; }
+.bg-brand-gold { background-color: #F59E0B; }
+.border-brand-gold { border-color: #F59E0B; }
+
+/* Smooth transitions for navigation */
+.nav-scrolled {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    border-bottom: 1px solid #333;
+}
+
+/* Section dividers similar to Google Sites */
+.site-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+    margin: 2rem 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #DC2626; }
