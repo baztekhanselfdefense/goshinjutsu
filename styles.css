@@ -26,3 +26,29 @@ h1, h2, h3, h4, .font-heading { font-family: 'Oswald', sans-serif; }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #1a1a1a; }
 ::-webkit-scrollbar-thumb { background: #DC2626; }
+
+/* Fade in from bottom animation */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-from-bottom {
+    animation: fadeInFromBottom 1s ease-out forwards;
+}
+
+/* Image carousel fade transition */
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.carousel-item {
+    animation: fade 1.5s ease-in-out;
+}
